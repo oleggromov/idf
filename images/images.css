@@ -13,7 +13,7 @@
   padding: 10px;
   background: white;
   box-shadow: 0 2px 10px rgba(0,0,0,.35);
-  transition: transform 0.8s ease, top 0.8s ease;
+  transition: transform 0.8s ease;
   filter: grayscale(100%);
 }
 
@@ -22,17 +22,17 @@
   transform: rotate(6deg);
 }
 
-.images:hover .image:nth-child(1) {
-  transform: rotate(0);
-}
+  .images:hover .image:nth-child(1) {
+    transform: rotate(0);
+  }
 
 .image:nth-child(2) {
   z-index: 2;
 }
 
-.images:hover .image:nth-child(2) {
-  top: 299px;
-}
+  .images:hover .image:nth-child(2) {
+    transform: translateY(100%);
+  }
 
 .image:nth-child(3) {
   z-index: 1;
@@ -40,10 +40,9 @@
   filter: grayscale(100%) blur(3px);
 }
 
-.images:hover .image:nth-child(3) {
-  top: 598px;
-  transform: rotate(0);
-}
+  .images:hover .image:nth-child(3) {
+    transform: translateY(200%) rotate(0);
+  }
 
 .images .image:hover {
   filter: none;
