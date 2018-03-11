@@ -66,6 +66,7 @@
       this.node.removeChild(this.loading)
       if (this.error) {
         this.error.remove()
+        this.error = null
       }
     }
 
