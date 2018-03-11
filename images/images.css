@@ -1,12 +1,10 @@
 .images {
   position: relative;
   width: 740px;
-  min-height: 850px;
   margin: 50px auto;
 }
 
 .image {
-  top: 0;
   position: absolute;
   width: 720px;
   height: 274px;
@@ -15,6 +13,18 @@
   box-shadow: 0 2px 10px rgba(0,0,0,.35);
   transition: transform 0.8s ease;
   filter: grayscale(100%);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .images {
+    width: 300px;
+    margin: 25px auto;
+  }
+
+  .image {
+    width: 280px;
+    height: 107px;
+  }
 }
 
 .image:nth-child(1) {
@@ -50,8 +60,8 @@
 
 .sizer {
   overflow: hidden;
-  width: 720px;
-  height: 274px;
+  width: 100%;
+  height: 100%;
 }
 
 img {
