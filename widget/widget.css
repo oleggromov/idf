@@ -1,12 +1,56 @@
-/**
- * IDF Code challenge 2018
- * Stub CSS for UX Daily widget
- * @copyright Copyright (c) 2018 Interaction Design Foundation
- */
-.idf-ux-daily-widget {}
-.idf-ux-daily-widget__header {
-    font-weight: bold;
+html,
+body {
+  paddind: 0;
+  font: normal 14px/1.4 Roboto;
 }
+
 .idf-ux-daily-widget__logo {
-    text-align: center;
+  text-align: center;
+}
+
+.idf-ux-daily-widget__header,
+.idf-article__published-time {
+  font-family: 'Roboto Condensed'
+}
+
+.idf-ux-daily-widget__header {
+  display: inline-block;
+  margin: 20px 0 -2px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  border-bottom: 3px solid #3aa3ff;
+}
+
+.idf-ux-daily-widget__articles {
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.idf-article {
+}
+
+.idf-article__link {
+  border-top: 1px solid #ccc;
+  display: block;
+  padding: 10px 20px 10px 5px;
+  color: #555;
+  text-decoration: none;
+}
+
+.idf-article__link:hover {
+  background: #eee;
+}
+
+.idf-article__published-time {
+  margin-top: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.idf-ux-daily-widget__text a {
+  color: #3aa3ff;
 }

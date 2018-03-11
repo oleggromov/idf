@@ -1,10 +1,8 @@
-(function () {
+(function (window) {
   const htmlEndpoint = 'https://test.information-architecture.org/widgets/ux-daily-v2?ep=mads_soegaard'
 
-  const fonts = '<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">'
-  const style = `body { font: normal 14px Roboto; }
-  .idf-ux-daily-widget__header,
-  .idf-article__published-time { font-family: 'Roboto Condensed' }`
+  const fonts = '<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700" rel="stylesheet">'
+  const styles = '<link rel="stylesheet" href="./widget.css" />'
 
   const createIframe = ({ parent, content, width, height }) => {
     const iframe = document.createElement('iframe')
@@ -16,7 +14,7 @@
     <head>
       <title></title>
       ${fonts}
-      <style>${style}</style>
+      ${styles}
     </head>
     <body>${content}</body>
     </html>`
@@ -32,14 +30,14 @@
   }
 
   const createError = ({ parent, content, action }) => {
-    const pre = document.createElement('div')
-    pre.innerHTML = `Error:\n${content}<br>Press this message to try again`
-    pre.addEventListener('click', action)
-    parent.appendChild(pre)
+    const div = document.createElement('div')
+    div.innerHTML = `Error:\n${content}<br>Press this message to try again`
+    div.addEventListener('click', action)
+    parent.appendChild(div)
     return {
       remove: () => {
-        pre.removeEventListener('click', action)
-        parent.removeChild(pre)
+        div.removeEventListener('click', action)
+        parent.removeChild(div)
       }
     }
   }
