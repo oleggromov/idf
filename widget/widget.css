@@ -1,0 +1,12 @@
+/**
+ * IDF Code challenge 2018
+ * Stub CSS for UX Daily widget
+ * @copyright Copyright (c) 2018 Interaction Design Foundation
+ */
+.idf-ux-daily-widget {}
+.idf-ux-daily-widget__header {
+    font-weight: bold;
+}
+.idf-ux-daily-widget__logo {
+    text-align: center;
+}
