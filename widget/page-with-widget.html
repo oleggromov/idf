@@ -11,8 +11,7 @@
 
 
 <div class="app">
-    <aside>
-        <!--Load widget here-->
+    <aside id="widget">
     </aside>
     <main>
         <h1>Hello!</h1>
@@ -62,5 +61,13 @@
 </div>
 
 <link rel="stylesheet" href="page-with-widget.css">
+<script src="./widget.js"></script>
+<script>
+    const widget = new IDFWidget({
+        node: document.querySelector('#widget'),
+        width: '100%',
+        height: '100%'
+    })
+</script>
 </body>
 </html>
